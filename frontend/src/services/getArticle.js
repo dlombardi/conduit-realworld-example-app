@@ -1,7 +1,8 @@
 import axios from "axios";
 import errorHandler from "../helpers/errorHandler";
 
-async function getArticle({ headers, slug }) {
+async function getArticle(args) {
+  const { headers, slug } = args
   try {
     const { data } = await axios({ headers, url: `api/articles/${slug}` });
 
