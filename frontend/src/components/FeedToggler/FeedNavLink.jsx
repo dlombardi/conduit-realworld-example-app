@@ -1,7 +1,8 @@
-import { useFeedContext } from "../../context/FeedContext";
+import { useContext } from "react"
+import { FeedContext } from '../../context/FeedContext';
 
 function FeedNavLink({ icon, name, text }) {
-  const { tabName, changeTab } = useFeedContext();
+  const { tabName, changeTab } = useContext(FeedContext);
 
   const handleClick = (e) => {
     changeTab(e, name);
